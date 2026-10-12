@@ -324,6 +324,16 @@ a:hover { color: var(--color-accent-600); }
 a.jaga-btn:hover { color: var(--jaga-fg); }
 a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--color-accent-600); }
 
+/* Bloque de contacto sobre el rojo de "¿Empezamos?": botones claros sobre el acento, como antes */
+.close-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 28px; }
+.close .jaga-btn, .close a.jaga-btn:hover { color: var(--color-bg); background: transparent; border-color: var(--color-bg); font-size: 15px; }
+.close .jaga-btn:hover { background: color-mix(in srgb, var(--color-bg) 12%, transparent); }
+.close .jaga-btn--primary, .close a.jaga-btn--primary:hover { color: var(--color-accent-700); background: var(--color-bg); }
+.close .jaga-contact__tel { display: inline-flex; align-items: center; min-height: var(--jaga-tap); color: var(--color-bg); font-weight: 600; }
+.close .jaga-contact__tel:hover { color: var(--color-bg); }
+.close .jaga-contact__meta { color: color-mix(in srgb, var(--color-bg) 85%, transparent); }
+.close :focus-visible { outline-color: var(--color-bg); }
+
 .skip-link{
   position:absolute; left:-999px; top:0; background:var(--color-accent); color:var(--color-bg);
   padding:.75em 1.2em; z-index:999;
