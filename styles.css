@@ -349,7 +349,7 @@ a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--colo
   color: var(--color-neutral-800); border: 1px solid var(--color-neutral-700);
 }
 .headline-pause {
-  display: inline-flex; align-items: center; min-height: 32px; margin: -8px 0 20px; padding: 4px 12px;
+  display: inline-flex; align-items: center; min-height: 44px; margin: -8px 0 20px; padding: 4px 14px;
   font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
   color: var(--color-text); background: transparent; border: 1px solid var(--color-divider);
 }
