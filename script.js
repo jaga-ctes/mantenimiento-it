@@ -43,11 +43,11 @@
   // ---------- Titular rotativo del hero ----------
   var headlines = [
     "¿La compu tarda una eternidad en arrancar?",
-    "¿Necesitas estudiar y tu compu está super lenta?",
+    "¿Necesitás estudiar y tu compu está súper lenta?",
     "¿Están seguros los datos de tus clientes?",
     "¿Tenés respaldo de tus documentos importantes?",
     "¿Querés recuperar archivos que creías perdidos?",
-    "Sospechás que tu equipo tiene algún virus o accesos no autorizados?",
+    "¿Sospechás que tu equipo tiene algún virus o accesos no autorizados?",
     "¿Tu red te expone a riesgos sin saberlo?",
     "¿Es segura la infraestructura de tu empresa?"
   ];
