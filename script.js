@@ -9,18 +9,18 @@
   // ---------- Menú mobile ----------
   var toggle = document.getElementById("nav-toggle");
   var links = document.getElementById("nav-links");
-  var toggleIcon = document.getElementById("nav-toggle-icon");
+  var toggleUse = document.getElementById("nav-toggle-use");
 
   function closeMenu() {
     links.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
-    toggleIcon.innerHTML = '<use href="#i-menu"></use>';
+    toggleUse.setAttribute("href", "#i-menu");
   }
 
   function openMenu() {
     links.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
-    toggleIcon.innerHTML = '<use href="#i-x"></use>';
+    toggleUse.setAttribute("href", "#i-x");
   }
 
   if (toggle && links) {
