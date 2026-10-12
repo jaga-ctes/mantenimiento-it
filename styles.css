@@ -115,6 +115,19 @@
   --shadow-lg: 0 12px 32px color-mix(in srgb, #2d2b2b 22%, transparent);
 }
 
+/* Tokens de la capa compartida (jaga-shared.css) con la identidad de Mantenimiento */
+:root {
+  --jaga-accent: var(--color-accent);
+  --jaga-on-accent: var(--color-bg);
+  --jaga-fg: var(--color-text);
+  --jaga-fg-muted: var(--color-neutral-700);
+  --jaga-bg: var(--color-bg);
+  --jaga-surface: var(--color-surface);
+  --jaga-border: var(--color-divider);
+  --jaga-font-ui: var(--font-body);
+  --jaga-font-mono: var(--font-body);
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
@@ -307,6 +320,9 @@ html { scroll-behavior: smooth; }
 body { margin: 0; text-wrap: pretty; }
 a { color: var(--color-accent); }
 a:hover { color: var(--color-accent-600); }
+/* a:hover cambia el color de todos los enlaces: los botones compartidos conservan el suyo */
+a.jaga-btn:hover { color: var(--jaga-fg); }
+a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--color-accent-600); }
 
 .skip-link{
   position:absolute; left:-999px; top:0; background:var(--color-accent); color:var(--color-bg);
