@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jagā — Mantenimiento, Optimización y Auditorías Informáticas en Corrientes</title>
+<title>Jagā — Mantenimiento y Auditorías Informáticas en Corrientes</title>
 <meta name="description" content="Auditamos, limpiamos y protegemos tu equipo, con informe en PDF de todo lo que encontramos. Particulares, profesionales y PyMEs en Corrientes Capital.">
 <link rel="canonical" href="https://mantenimiento.jagasoluciones.com/">
 
@@ -103,12 +103,13 @@
 
   <main id="inicio">
   <section style="max-width:1200px; margin:0 auto; padding:clamp(48px,8vw,96px) clamp(20px,5vw,32px) clamp(40px,6vw,72px); display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:56px; align-items:center;">
-    <div>
+    <div id="hero-text">
       <p style="font-size:22px; font-weight:800; letter-spacing:-0.01em; margin:0 0 12px;">Jagā — Mantenimiento Informático</p>
       <span style="display:block; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--color-accent-700); font-weight:600; margin:0 0 16px;">Corrientes Capital</span>
       <h1 style="font-size:clamp(32px,4.6vw,50px); line-height:1.1; letter-spacing:-0.02em; margin:0 0 20px; min-height:2.2em;">
         <span id="rotating-headline" style="display:block; transition:opacity .35s ease;">¿La compu tarda una eternidad en arrancar?</span>
       </h1>
+      <button type="button" class="headline-pause" id="headline-pause" aria-pressed="false" aria-controls="rotating-headline" hidden>Pausar frases</button>
       <p style="font-size:17px; line-height:1.65; max-width:46ch; color:color-mix(in srgb, var(--color-text) 82%, transparent); margin:0 0 28px;">No solo limpiamos tu equipo: la auditamos. Encontramos el problema real, lo resolvemos y te entregamos un informe documentado de todo lo que hicimos — pensado para particulares, profesionales y PyMEs.</p>
       <div style="display:flex; flex-wrap:wrap; gap:var(--space-3); margin-bottom:16px;">
         <a href="https://wa.me/5493794870266?text=Hola%2C%20quiero%20coordinar%20un%20diagn%C3%B3stico" target="_blank" rel="noopener" class="btn btn-primary" style="padding:14px 26px; font-size:15px;">
@@ -119,7 +120,9 @@
       <p style="font-size:13px; letter-spacing:0.02em; color:color-mix(in srgb, var(--color-text) 55%, transparent); margin:0;">Respuesta en 24–48 h</p>
     </div>
 
-    <div aria-hidden="true" style="border:1px solid var(--color-divider); background:var(--color-surface); padding:24px 26px;">
+    <div style="border:1px solid var(--color-divider); background:var(--color-surface); padding:24px 26px;">
+      <p class="example-label">Ejemplo ilustrativo</p>
+      <div aria-hidden="true">
       <div style="display:flex; align-items:center; gap:10px; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 60%, transparent); padding-bottom:14px; margin-bottom:14px; border-bottom:1px solid var(--color-divider);">
         <span style="width:7px; height:7px; background:var(--color-accent); flex-shrink:0;"></span>
         informe_jaga.pdf
@@ -136,6 +139,7 @@
         <div style="position:absolute; inset:0; width:68%; background:var(--color-accent);"></div>
       </div>
       <p style="font-size:12px; color:color-mix(in srgb, var(--color-text) 60%, transparent); margin:0;">Severidad general <strong style="color:var(--color-accent-700);">Media</strong> · informe documentado</p>
+      </div>
     </div>
   </section>
 
@@ -173,7 +177,7 @@
         <h3 class="card-title" style="font-size:19px;">PyMEs y comercios</h3>
         <p style="font-size:14px; color:color-mix(in srgb, var(--color-text) 78%, transparent); margin:0 0 6px;">Sin la posibilidad de tener un área de sistemas, cada falla técnica la intenta resolver alguien que tiene otra cosa que hacer — y eso tiene un costo real. Ofrecemos una solución que se adapta a sus necesidades.</p>
         <ul style="margin:6px 0 0; padding:0; list-style:none;">
-          <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Mantenimiento regular de set de equipos - ideal para empresas sin área de sistemas permanente</li>
+          <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Mantenimiento regular de todos los equipos — ideal para empresas sin área de sistemas propia</li>
           <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Auditoría de red para detectar accesos y vulnerabilidades</li>
           <li style="position:relative; padding-left:16px; margin-bottom:0; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Contrato mensual con atención prioritaria</li>
         </ul>
@@ -247,7 +251,7 @@
         <p style="margin:0 0 16px; font-size:14px; font-weight:600;">Cotización según equipo y modalidad</p>
         <p style="font-size:14px; color:color-mix(in srgb, var(--color-text) 78%, transparent); margin:0 0 6px;">Para quienes necesitan saber exactamente en qué estado está su equipo y su red.</p>
         <ul style="margin:6px 0 20px; padding:0; list-style:none;">
-          <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Todo el Plan de Limpieza &amp; Optimización + </li>
+          <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Todo lo del Plan Limpieza &amp; Optimización, más:</li>
           <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Revisión de red (estado y configuración): puertos, router y dispositivos, sin pruebas de intrusión</li>
           <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Procesos activos y persistencia sospechosa</li>
           <li style="position:relative; padding-left:16px; margin-bottom:0; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Informe con severidad Alta / Media / Baja</li>
@@ -260,11 +264,11 @@
         <p style="font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 55%, transparent); margin:0 0 6px;">Plan 03</p>
         <h3 style="font-size:21px; margin:0 0 10px;">Mantenimiento Continuo</h3>
         <p style="margin:0 0 16px; font-size:14px; font-weight:600;">Cotización mensual por equipo</p>
-        <p style="font-size:14px; color:color-mix(in srgb, var(--color-text) 78%, transparent); margin:0 0 6px;">El plan más completo para PyMEs y profesionales que necesitan que sus equipos nunca fallen.</p>
+        <p style="font-size:14px; color:color-mix(in srgb, var(--color-text) 78%, transparent); margin:0 0 6px;">El plan más completo para PyMEs y profesionales que necesitan que sus equipos estén siempre en condiciones.</p>
         <ul style="margin:6px 0 20px; padding:0; list-style:none;">
           <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Revisión mensual del estado del equipo</li>
           <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Limpieza, optimización y verificación de seguridad</li>
-          <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Informes comparativo con anterior, semestral y anual</li>
+          <li style="position:relative; padding-left:16px; margin-bottom:8px; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Informe comparativo con el anterior, semestral y anual</li>
           <li style="position:relative; padding-left:16px; margin-bottom:0; font-size:13.5px;"><span style="position:absolute; left:0; top:6px; width:6px; height:6px; background:var(--color-accent);"></span>Atención prioritaria por WhatsApp</li>
         </ul>
         <a href="https://wa.me/5493794870266?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%2003%20de%20Jag%C4%81" target="_blank" rel="noopener" class="btn btn-secondary btn-block">Consultar tarifa</a>
@@ -290,7 +294,7 @@
     </div>
   </section>
 
-  <section class="close" style="background:var(--color-accent); color:var(--color-bg);" id="contacto">
+  <section class="close" style="background:var(--color-accent-700); color:var(--color-bg);" id="contacto">
     <div style="max-width:1200px; margin:0 auto; padding:72px clamp(20px,5vw,32px);">
       <h2 style="font-size:clamp(30px,4.4vw,52px); line-height:1.05; letter-spacing:-0.015em; color:var(--color-bg); margin:0 0 20px;">
         <span style="display:block;">¿Empezamos?</span>

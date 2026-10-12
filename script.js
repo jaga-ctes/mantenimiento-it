@@ -43,19 +43,40 @@
   // ---------- Titular rotativo del hero ----------
   var headlines = [
     "¿La compu tarda una eternidad en arrancar?",
-    "¿Necesitas estudiar y tu compu está super lenta?",
+    "¿Necesitás estudiar y tu compu está súper lenta?",
     "¿Están seguros los datos de tus clientes?",
     "¿Tenés respaldo de tus documentos importantes?",
     "¿Querés recuperar archivos que creías perdidos?",
-    "Sospechás que tu equipo tiene algún virus o accesos no autorizados?",
+    "¿Sospechás que tu equipo tiene algún virus o accesos no autorizados?",
     "¿Tu red te expone a riesgos sin saberlo?",
     "¿Es segura la infraestructura de tu empresa?"
   ];
   var headlineEl = document.getElementById("rotating-headline");
+  var headlineArea = document.getElementById("hero-text");
+  var pauseBtn = document.getElementById("headline-pause");
   var headlineIndex = 0;
+  var userPaused = false;   // botón "Pausar frases"
+  var hoverPaused = false;  // mouse o foco dentro del área
 
   if (headlineEl && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (pauseBtn) {
+      pauseBtn.hidden = false;
+      pauseBtn.addEventListener("click", function () {
+        userPaused = !userPaused;
+        pauseBtn.setAttribute("aria-pressed", userPaused ? "true" : "false");
+      });
+    }
+    if (headlineArea) {
+      headlineArea.addEventListener("mouseenter", function () { hoverPaused = true; });
+      headlineArea.addEventListener("mouseleave", function () { hoverPaused = false; });
+      headlineArea.addEventListener("focusin", function () { hoverPaused = true; });
+      headlineArea.addEventListener("focusout", function (e) {
+        if (!headlineArea.contains(e.relatedTarget)) hoverPaused = false;
+      });
+    }
+
     setInterval(function () {
+      if (userPaused || hoverPaused) return;
       headlineEl.style.opacity = "0";
       setTimeout(function () {
         headlineIndex = (headlineIndex + 1) % headlines.length;

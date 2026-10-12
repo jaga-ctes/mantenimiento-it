@@ -93,6 +93,13 @@
   --color-accent-2-800: #71261b;
   --color-accent-2-900: #471d16;
 
+  /* Roles del acento (contraste AA): el #ec3013 queda para lo decorativo */
+  --color-primary: var(--color-accent-600);      /* fondo de botones primarios, texto blanco 4,74:1 */
+  --color-primary-hover: var(--color-accent-700);
+  --color-on-primary: #ffffff;
+  --color-accent-text: var(--color-accent-700);  /* acento usado como texto, 6,41:1 sobre el fondo */
+  --color-accent-text-hover: var(--color-accent-800);
+
   --font-heading: "Archivo", system-ui, sans-serif;
   --font-heading-weight: 800;
   --font-body: "Archivo", system-ui, sans-serif;
@@ -117,8 +124,8 @@
 
 /* Tokens de la capa compartida (jaga-shared.css) con la identidad de Mantenimiento */
 :root {
-  --jaga-accent: var(--color-accent);
-  --jaga-on-accent: var(--color-bg);
+  --jaga-accent: var(--color-primary);
+  --jaga-on-accent: var(--color-on-primary);
   --jaga-fg: var(--color-text);
   --jaga-fg-muted: var(--color-neutral-700);
   --jaga-bg: var(--color-bg);
@@ -155,7 +162,7 @@ h5 { font-size: 16px; }
 h6 { font-size: 13px; }
 h6 { letter-spacing: 0.08em; text-transform: uppercase; }
 p { margin: 0 0 var(--space-3); }
-a { color: var(--color-accent); text-underline-offset: 3px; }
+a { color: var(--color-accent-text); text-underline-offset: 3px; }
 img { display: block; max-width: 100%; }
 figure { margin: 0; }
 figcaption {
@@ -186,13 +193,13 @@ figcaption {
 }
 .btn svg { display: block; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.btn-primary { background: var(--color-accent); color: var(--color-bg); }
-.btn-primary:hover { background: var(--color-accent-600); }
-.btn-primary:active { background: var(--color-accent-700); }
+.btn-primary { background: var(--color-primary); color: var(--color-on-primary); }
+.btn-primary:hover { background: var(--color-primary-hover); }
+.btn-primary:active { background: var(--color-accent-800); }
 .btn-secondary { border-color: var(--color-divider); }
 .btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
-.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost { color: var(--color-accent-text); padding-inline: var(--space-1); }
 .btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
 .btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
 .btn-icon { width: 36px; height: 36px; padding: 0; }
@@ -244,7 +251,7 @@ textarea.input { min-height: 90px; resize: vertical; }
   display: flex; flex-direction: column; gap: var(--space-2);
   padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
 }
-.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-text); }
 .card-title {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
   font-size: 17px; line-height: 1.2;
@@ -267,7 +274,7 @@ textarea.input { min-height: 90px; resize: vertical; }
 .tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
 .tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
 .tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
-.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent-text); }
 
 /* — navigation — */
 .nav {
@@ -280,7 +287,8 @@ textarea.input { min-height: 90px; resize: vertical; }
   font-size: 18px; margin-right: auto;
 }
 .nav a { color: inherit; text-decoration: none; font-size: 14px; }
-.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent-text); }
+.nav a.btn-primary, .nav a.btn-primary:hover { color: var(--color-on-primary); }
 
 /* — tables — */
 .table { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -318,11 +326,11 @@ textarea.input { min-height: 90px; resize: vertical; }
    ============================================================ */
 html { scroll-behavior: smooth; }
 body { margin: 0; text-wrap: pretty; }
-a { color: var(--color-accent); }
-a:hover { color: var(--color-accent-600); }
+a { color: var(--color-accent-text); }
+a:hover { color: var(--color-accent-text-hover); }
 /* a:hover cambia el color de todos los enlaces: los botones compartidos conservan el suyo */
 a.jaga-btn:hover { color: var(--jaga-fg); }
-a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--color-accent-600); }
+a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--color-primary-hover); }
 
 /* Bloque de contacto sobre el rojo de "¿Empezamos?": botones claros sobre el acento, como antes */
 .close-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 28px; }
@@ -334,11 +342,21 @@ a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--colo
 .close .jaga-contact__meta { color: color-mix(in srgb, var(--color-bg) 85%, transparent); }
 .close :focus-visible { outline-color: var(--color-bg); }
 
-.skip-link{
-  position:absolute; left:-999px; top:0; background:var(--color-accent); color:var(--color-bg);
-  padding:.75em 1.2em; z-index:999;
+/* Hero: etiqueta del informe de muestra y pausa del titular rotativo */
+.example-label {
+  display: inline-block; margin: 0 0 14px; padding: 3px 10px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-neutral-800); border: 1px solid var(--color-neutral-700);
 }
-.skip-link:focus{ left:0; }
+.headline-pause {
+  display: inline-flex; align-items: center; min-height: 44px; margin: -8px 0 20px; padding: 4px 14px;
+  font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  color: var(--color-text); background: transparent; border: 1px solid var(--color-divider);
+}
+.headline-pause:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.headline-pause[aria-pressed="true"] { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); }
+.headline-pause[hidden] { display: none; }
+
 
 /* ============================================================
    Navegación — menú mobile
