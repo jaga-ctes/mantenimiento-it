@@ -357,11 +357,6 @@ a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--colo
 .headline-pause[aria-pressed="true"] { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); }
 .headline-pause[hidden] { display: none; }
 
-.skip-link{
-  position:absolute; left:-999px; top:0; background:var(--color-accent); color:var(--color-bg);
-  padding:.75em 1.2em; z-index:999;
-}
-.skip-link:focus{ left:0; }
 
 /* ============================================================
    Navegación — menú mobile
