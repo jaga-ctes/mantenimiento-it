@@ -1,6 +1,6 @@
 // ============================================================
 // JAGĀ — landing script
-// Menú mobile + titular rotativo. Sin dependencias externas.
+// Menú mobile + titular rotativo + flecha "Volver arriba". Sin dependencias externas.
 // ============================================================
 
 (function () {
@@ -84,5 +84,32 @@
         headlineEl.style.opacity = "1";
       }, 350);
     }, 4200);
+  }
+
+  // ---------- Flecha "Volver arriba" ----------
+  // Aparece después de una pantalla de scroll (cuando el comienzo ya no se ve, en cualquier dispositivo).
+  // Lleva al tope y deja el foco en el logo del encabezado (#arriba). Suave solo sin movimiento reducido.
+  var toTop = document.getElementById("volver-arriba");
+  var topTarget = document.getElementById("arriba");
+  if (toTop) {
+    var ticking = false;
+    var updateToTop = function () {
+      ticking = false;
+      toTop.classList.toggle("is-visible", window.scrollY > window.innerHeight);
+    };
+    var requestUpdate = function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(updateToTop); }
+    };
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate, { passive: true });
+    updateToTop();
+
+    toTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      var smooth = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+      try { window.scrollTo({ top: 0, left: 0, behavior: smooth ? "smooth" : "instant" }); }
+      catch (err) { window.scrollTo(0, 0); }
+      if (topTarget) topTarget.focus({ preventScroll: true });
+    });
   }
 })();
