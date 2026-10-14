@@ -36,7 +36,7 @@
 <link rel="preload" href="fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="stylesheet" href="jaga-shared.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261014">
 
 <!-- JSON-LD: LocalBusiness -->
 <script type="application/ld+json">
@@ -85,7 +85,7 @@
 <div style="background:var(--color-bg); color:var(--color-text); min-height:100vh;">
 
   <header class="nav" style="position:sticky; top:0; z-index:50; background:var(--color-bg); flex-wrap:wrap;">
-    <a href="#inicio" style="display:flex; align-items:center; margin-right:auto;">
+    <a id="arriba" href="#inicio" style="display:flex; align-items:center; margin-right:auto;">
       <img src="img/jaga-logo-horizontal-white.png" width="447" height="144" alt="Jagā — Mantenimiento Informático" style="height:72px; width:auto;">
     </a>
 
@@ -323,6 +323,7 @@
       <div>
         <img src="img/jaga-logo-horizontal-white.png" width="447" height="144" alt="Jagā" loading="lazy" decoding="async" style="height:48px; width:auto; margin-bottom:10px;">
         <p style="font-size:13px; color:color-mix(in srgb, var(--color-text) 60%, transparent); margin:0;">Mantenimiento · Optimización · Auditorías Informáticas</p>
+        <a class="back-home" href="https://jagasoluciones.com/" aria-label="Volver al inicio de jagasoluciones.com"><span aria-hidden="true">←</span> Volver al inicio</a>
       </div>
       <nav style="display:flex; flex-direction:column; gap:8px;">
         <a href="#quienes" style="font-size:14px; text-decoration:none; color:var(--color-text);">¿Para quién?</a>
@@ -347,8 +348,12 @@
     </div>
   </footer>
 
+  <a class="to-top" id="volver-arriba" href="#arriba" aria-label="Volver arriba">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20V5M5 11.5L12 4.5l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path></svg>
+  </a>
+
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=20261014"></script>
 </body>
 </html>
