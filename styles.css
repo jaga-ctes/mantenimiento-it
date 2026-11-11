@@ -356,6 +356,13 @@ a.jaga-btn--primary:hover { color: var(--jaga-on-accent); background: var(--colo
 .headline-pause:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
 .headline-pause[aria-pressed="true"] { background: var(--color-text); color: var(--color-bg); border-color: var(--color-text); }
 .headline-pause[hidden] { display: none; }
+/* H1 del hero (mismo aspecto que la línea de marca anterior, un <p> de 22 px) y titular rotativo como párrafo
+   (mismo aspecto que el <h1> anterior). El id + clase gana a las reglas globales de h1. */
+#hero-text .hero-title { font-size: 22px; font-weight: 800; line-height: 1.55; letter-spacing: -0.01em; margin: 0 0 12px; }
+#hero-text .hero-rotating {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: clamp(32px, 4.6vw, 50px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 20px; min-height: 2.2em;
+}
 
 /* Pie: enlace al hub (jagasoluciones.com) */
 a.back-home {
